@@ -41,7 +41,7 @@ function App() {
         </Steps>
         <Content />
         <Button handleClick={prevClick} copy="Previous"/>
-        <Button handleClick={nextClick} copy="Next"/>
+        <Button handleClick={nextClick} copy="Next" submitDisabled={!submitDisabled}/>
         <Button handleClick={submitClick} copy="Submit" submitDisabled={submitDisabled}/>
       </div>
   );
