@@ -1,9 +1,15 @@
 import './Step.css';
 
 function Step(props) {
-    const { number, title, focus } = props;
+    const { 
+        focus, 
+        number, 
+        title 
+    } = props;
+
     const isActive = focus === number;
     const isComplete = focus > number;
+
     return (
         <div className='Step'>
             <div className={`${isActive ? 'Step__icon--active' : ''} ${isComplete ? 'Step--completed' : 'Step--not-completed'} icon`}>

@@ -1,7 +1,11 @@
 import './Button.css';
 
 function Button(props) {
-    const { isDisabled, copy, handleClick } = props;
+    const { 
+        copy, 
+        handleClick, 
+        isDisabled 
+    } = props;
     return (
         <button className="Button" onClick={handleClick} disabled={isDisabled}>
             {copy}

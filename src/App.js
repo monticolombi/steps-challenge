@@ -43,14 +43,38 @@ function App() {
   return (
       <div className="App">
         <Steps>
-          <Step title="First" number={1} focus={focus}/>
-          <Step title="Second" number={2} focus={focus}/>
-          <Step title="Last" number={3} focus={focus}/>
+          <Step 
+            focus={focus}
+            number={1} 
+            title="First" 
+          />
+          <Step 
+            focus={focus}
+            number={2} 
+            title="Second" 
+          />
+          <Step 
+            focus={focus}
+            number={3} 
+            title="Last" 
+          />
         </Steps>
         <Content copy={contentCopy} />
-        <Button handleClick={prevClick} copy="Previous" isDisabled={focus === 1}/>
-        <Button handleClick={nextClick} copy="Next" isDisabled={!submitDisabled}/>
-        <Button handleClick={submitClick} copy="Submit" isDisabled={submitDisabled}/>
+        <Button 
+          copy="Previous" 
+          handleClick={prevClick} 
+          isDisabled={focus === 1}
+        />
+        <Button 
+          copy="Next" 
+          handleClick={nextClick} 
+          isDisabled={!submitDisabled}
+        />
+        <Button 
+          copy="Submit" 
+          handleClick={submitClick} 
+          isDisabled={submitDisabled}
+        />
       </div>
   );
 }
