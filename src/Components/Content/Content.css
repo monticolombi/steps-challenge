@@ -3,4 +3,11 @@
     width: 100%;
     min-height: 400px;
     background: rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.Content__text {
+    padding: 40px;
+    font-size: x-large;
+    font-weight: lighter;
 }

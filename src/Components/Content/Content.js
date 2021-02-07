@@ -4,7 +4,7 @@ function Content(props) {
     const { copy } = props;
     return (
         <div className="Content">
-            {copy}
+            <p className="Content__text">{copy}</p>
         </div>
     )
 }

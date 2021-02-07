@@ -7,16 +7,24 @@ import Step from './Components/Step';
 import './App.css';
 
 function App() {
+  const contentCopyCMS = {
+    1: 'First form details', 
+    2: 'Second form details', 
+    3: 'Third form details', 
+    4: 'Thank You for Completing the form. Please submit your details!'
+  };
+
   const [ focus, setFocus ] = useState(1);
-  const maxSteps = 4;
+  const [ contentCopy, setContentCopy ] = useState(contentCopyCMS['1']);
+
+  const maxSteps = 3;
   const submitDisabled = focus < maxSteps + 1;
-  console.log(focus, maxSteps)
-  console.log(submitDisabled)
   
   const nextClick = () => {
     if(focus > maxSteps) {
       return null;
     }
+    setContentCopy(contentCopyCMS[focus + 1]);
     setFocus(focus + 1);
   }
 
@@ -24,6 +32,7 @@ function App() {
     if(focus <= 1) {
       return null;
     }
+    setContentCopy(contentCopyCMS[focus - 1]);
     setFocus(focus - 1);
   }
 
@@ -36,10 +45,9 @@ function App() {
         <Steps>
           <Step title="First" number={1} isComplete={false} focus={focus}/>
           <Step title="Second" number={2} isComplete={false} focus={focus}/>
-          <Step title="Third" number={3} isComplete={false} focus={focus}/>
-          <Step title="Last" number={4} isComplete={false} focus={focus}/>
+          <Step title="Last" number={3} isComplete={false} focus={focus}/>
         </Steps>
-        <Content />
+        <Content copy={contentCopy} />
         <Button handleClick={prevClick} copy="Previous"/>
         <Button handleClick={nextClick} copy="Next" submitDisabled={!submitDisabled}/>
         <Button handleClick={submitClick} copy="Submit" submitDisabled={submitDisabled}/>
