@@ -48,9 +48,9 @@ function App() {
           <Step title="Last" number={3} isComplete={false} focus={focus}/>
         </Steps>
         <Content copy={contentCopy} />
-        <Button handleClick={prevClick} copy="Previous"/>
-        <Button handleClick={nextClick} copy="Next" submitDisabled={!submitDisabled}/>
-        <Button handleClick={submitClick} copy="Submit" submitDisabled={submitDisabled}/>
+        <Button handleClick={prevClick} copy="Previous" isDisabled={focus === 1}/>
+        <Button handleClick={nextClick} copy="Next" isDisabled={!submitDisabled}/>
+        <Button handleClick={submitClick} copy="Submit" isDisabled={submitDisabled}/>
       </div>
   );
 }

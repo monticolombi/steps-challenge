@@ -1,9 +1,9 @@
 import './Button.css';
 
 function Button(props) {
-    const { submitDisabled, copy, handleClick } = props;
+    const { isDisabled, copy, handleClick } = props;
     return (
-        <button className="Button" onClick={handleClick} disabled={submitDisabled}>
+        <button className="Button" onClick={handleClick} disabled={isDisabled}>
             {copy}
         </button>
     )
