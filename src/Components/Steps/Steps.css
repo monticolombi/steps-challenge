@@ -1,0 +1,5 @@
+.Steps {
+    display: flex;
+    flex-flow: wrap;
+    padding: 15px 20px;
+}

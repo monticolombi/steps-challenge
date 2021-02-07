@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Content from './Components/Content';
+import Steps from './Components/Steps';
+import Step from './Components/Step';
+
 import './App.css';
 
 function App() {
+  const [ focus, setFocus ] = useState(2);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Steps>
+        <Step title="First" number={1} isComplete={false} focus={focus}/>
+        <Step title="Second" number={2} isComplete={false} focus={focus}/>
+        <Step title="Last" number={3} isComplete={false} focus={focus}/>
+      </Steps>
+      <Content />
     </div>
   );
 }

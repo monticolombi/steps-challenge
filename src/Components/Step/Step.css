@@ -1,0 +1,49 @@
+.Step {
+    align-items: center;
+    display: flex;
+    margin: 20px 100px 20px 0;
+}
+
+.icon {
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid #000;
+    display: flex;
+    font-size: large;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.checkmark {
+    font-family: arial;
+    font-size:larger;
+    -ms-transform: scaleX(-1) rotate(-45deg); /* IE 9 */
+    -webkit-transform: scaleX(-1) rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: scaleX(-1) rotate(-45deg);
+    color: #3cb371;
+  }
+
+  .Step--not-completed {
+    border-color: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.1);
+  }
+
+  .Step--completed {
+    border-color: #3cb371;
+    color: #3cb371;
+  }
+
+  .Step__icon--active {
+      background: #0390fc;
+      color: #fff;
+  }
+
+  .Step__title--active {
+    color: #0390fc;
+    font-weight: bold;
+}
