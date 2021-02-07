@@ -43,9 +43,9 @@ function App() {
   return (
       <div className="App">
         <Steps>
-          <Step title="First" number={1} isComplete={false} focus={focus}/>
-          <Step title="Second" number={2} isComplete={false} focus={focus}/>
-          <Step title="Last" number={3} isComplete={false} focus={focus}/>
+          <Step title="First" number={1} focus={focus}/>
+          <Step title="Second" number={2} focus={focus}/>
+          <Step title="Last" number={3} focus={focus}/>
         </Steps>
         <Content copy={contentCopy} />
         <Button handleClick={prevClick} copy="Previous" isDisabled={focus === 1}/>
